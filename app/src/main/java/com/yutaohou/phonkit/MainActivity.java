@@ -14,18 +14,13 @@
 * limitations under the License.
 */
 
-
-
-
 package com.yutaohou.phonkit;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
@@ -44,8 +39,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
         // Prepare list of samples in this dashboard.
         mSamples = new Sample[]{
-                new Sample(R.string.navigationdraweractivity_title, R.string.navigationdraweractivity_description,
-                        NavigationDrawerActivity.class),
+            new Sample(R.string.navigationdraweractivity_title, R.string.navigationdraweractivity_description,
+                    NavigationDrawerActivity.class),
         };
 
         // Prepare the GridView
@@ -102,7 +97,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         }
 
         private Sample(int titleResId, int descriptionResId,
-                       Class<? extends Activity> activityClass) {
+                Class<? extends Activity> activityClass) {
             this(titleResId, descriptionResId,
                     new Intent(MainActivity.this, activityClass));
         }
